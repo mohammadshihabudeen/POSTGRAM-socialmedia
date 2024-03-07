@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer" >
 
       <p>
-      Total {Count === 1 ? 'post' : 'posts'}: {Count}  CopyRights &copy; {new Date().getFullYear()} 
+      Total {Count === 1 ? 'post' : 'posts'}: {Count} || CopyRights &copy; {new Date().getFullYear()} 
       </p>
     </footer>
   );
