@@ -1,4 +1,3 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
@@ -7,8 +6,8 @@ import { Link } from 'react-router-dom';
 import Header from './Header';
 import { useContext } from 'react';
 import DataContext from './context/DataContext';
-function NavBar({ }) {
-  const {title, searchHandler, search, setSearch } = useContext(DataContext)
+function NavBar() {
+  const {searchHandler, search, setSearch } = useContext(DataContext)
   return (
 <>
 <Header />

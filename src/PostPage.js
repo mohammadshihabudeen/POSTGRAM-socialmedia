@@ -7,7 +7,7 @@ import formatDateTime from './timeFormat';
 const PostPage = () => {
   const { Posts, handleDelete } = useContext(DataContext)
   const { id } = useParams()
-  const post = Posts.find((post) => post.id == id)
+  const post = Posts.find((post) => post.id === id)
 
   return (
     <>

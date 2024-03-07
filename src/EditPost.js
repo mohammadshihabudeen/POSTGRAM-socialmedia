@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext} from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useParams } from 'react-router-dom';
@@ -6,14 +6,12 @@ import DataContext from './context/DataContext';
 const EditPost = () => {
 const {HandleUpdate,updatedTitle,setUpdatedTitle,updatedContent,setUpdatedContent,Posts} = useContext(DataContext)
 const {id} = useParams()
-const post = Posts.find((post)=>post.id==id)
-useEffect(()=>{
+const post = Posts.find((post)=>post.id===id)
     if(post)
     {
         setUpdatedTitle(post.title)
 setUpdatedContent(post.content)
     }
-},[])
   return (
     <div className="container">
     <div className="row justify-content-center">
