@@ -64,7 +64,7 @@ export const DataProvider= ({children}) =>{
   
     }
     const handleDelete = async (id) => {
-      const newList = Posts.filter(pos => pos.id != id)
+      const newList = Posts.filter(pos => pos.id !== id)
       try {
         await api.delete(`/Posts/${id}.json`);
       }
@@ -81,7 +81,7 @@ export const DataProvider= ({children}) =>{
         time: new Date().toISOString(),
         content: updatedContent
       }
-      const updatedList = Posts.map((post) => post.id == id ? updatedItem : post)
+      const updatedList = Posts.map((post) => post.id === id ? updatedItem : post)
       setPosts(updatedList)
       try {
         await api.put(`/Posts/${id}.json`, updatedItem);
